@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Carousel, Container, Row, Col, ListGroup } from 'react-bootstrap';
+import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Carousel, Container, Row, Col, ListGroup, Alert } from 'react-bootstrap';
 import Screenshot from './images/Screen.png';
 import Screentwo from './images/Screentwo.png';
 import Screenthree from './images/Screenthree.png';
@@ -45,8 +45,7 @@ function Caro() {
           />
         </div>
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>These are the glitches i've experienced in CYBERPUNK</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -58,8 +57,7 @@ function Caro() {
           />
         </div>
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3>These are the glitches i've experienced in CYBERPUNK</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -71,8 +69,7 @@ function Caro() {
           />
         </div>
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <h3>These are the glitches i've experienced in CYBERPUNK</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
@@ -82,8 +79,8 @@ function Caro() {
 function Butt() {
   return (
     <>
-      <Container>
-        <Row className="d-flex justify-content-center">
+      <Container className="mt-5">
+        <Row>
           <Col>
             <Button variant="primary">Primary</Button>{' '}
             <Button variant="secondary">Secondary</Button>{' '}
@@ -95,9 +92,6 @@ function Butt() {
           <Col>
             <Button variant="danger">Danger</Button>
             <Button variant="light">Light</Button>
-
-          </Col>
-          <Col>
             <Button variant="link">Link</Button>
           </Col>
         </Row>
@@ -109,29 +103,17 @@ function Butt() {
 function LiGroup() {
   return (
     <>
-      <Container>
+      <Container className="mt-5">
         <Row>
           <Col>
             <ListGroup>
               <ListGroup.Item>No style</ListGroup.Item>
               <ListGroup.Item variant="primary">Primary</ListGroup.Item>
-            </ListGroup>
-          </Col>
-          <Col>
-            <ListGroup>
               <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
               <ListGroup.Item variant="success">Success</ListGroup.Item>
               <ListGroup.Item variant="danger">Danger</ListGroup.Item>
-            </ListGroup>
-          </Col>
-          <Col>
-            <ListGroup>
               <ListGroup.Item variant="light">Light</ListGroup.Item>
               <ListGroup.Item variant="dark">Dark</ListGroup.Item>
-            </ListGroup>
-          </Col>
-          <Col>
-            <ListGroup>
               <ListGroup.Item variant="warning">Warning</ListGroup.Item>
               <ListGroup.Item variant="info">Info</ListGroup.Item>
             </ListGroup>
@@ -141,6 +123,26 @@ function LiGroup() {
     </>
   )
 }
+
+function FooterBar() {
+  return (
+    <>
+      <Container fluid className="mt-5">
+        <Row>
+          <Col className="BGColor d-flex justify-content-center">
+            
+              <p className="White mt-2">
+                This is a footer here
+              </p>
+            
+          </Col>
+        </Row>
+      </Container>
+    </>
+  )
+}
+
+
 function App() {
   return (
     <>
@@ -148,6 +150,7 @@ function App() {
       <Caro />
       <Butt />
       <LiGroup />
+      <FooterBar />
     </>
   );
 }
